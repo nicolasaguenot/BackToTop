@@ -21,6 +21,7 @@
 			/* vars */
 			text : 'Back to top',
 			autoShow : true,
+			autoShowOffset : 0,
 			timeEffect : 500,
 			effectScroll : 'linear',
 			appearMethod : 'slide'
@@ -39,7 +40,7 @@
 			/** Appear link when scrolling the window **/
 			if(opts.autoShow)
 			$(window).scroll(function(){
-				if($(this).scrollTop() != 0) {
+				if($(this).scrollTop() > opts.autoShowOffset) {
 					switch (opts.appearMethod) {
 						case 'fade' : divBack.fadeIn('fast'); break;
 						case 'slide' : divBack.slideDown('fast'); break;
