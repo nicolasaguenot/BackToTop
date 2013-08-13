@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link rel="stylesheet" href="css/BackToTop.jquery.css" type="text/css" />
+	<link rel="stylesheet" href="css/backtotop.css" type="text/css" />
 </head>
 
 <body>
@@ -70,7 +70,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 
 	<script type="text/javascript" src="jquery/jquery.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
-	<script type="text/javascript" src="jquery/BackToTop.jquery.js"></script>
+	<script type="text/javascript" src="jquery/BackToTop.min.jquery.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		BackToTop({

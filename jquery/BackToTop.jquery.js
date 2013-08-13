@@ -2,11 +2,11 @@
 *************************************************************************
 @Name :       	BackToTop - jQuery Plugin
 @Revison :    	1.0
-@Date : 		12/2011
+@Date : 		08/2013
 @Author:     	ALPIXEL - (www.myjqueryplugins.com - www.alpixel.fr)
 @Support:    	FF, IE7, IE8, MAC Firefox, MAC Safari
 @License :		Open Source - MIT License : http://www.opensource.org/licenses/mit-license.php
- 
+
 **************************************************************************
 *************************************************************************/
 
@@ -26,7 +26,7 @@
 			effectScroll : 'linear',
 			appearMethod : 'slide'
 		},
-		
+
 		/*****************/
 		/** Init Method **/
 		/*****************/
@@ -35,34 +35,34 @@
 			opts = $.extend({}, $.BackToTop.defaults, options),
 			/** Construct the link **/
 			$.BackToTop._constructLink();
-			
-			
+
+
 			/** Appear link when scrolling the window **/
 			if(opts.autoShow)
 			$(window).scroll(function(){
 				if($(this).scrollTop() > opts.autoShowOffset) {
 					switch (opts.appearMethod) {
-						case 'fade' : divBack.fadeIn('fast'); break;
-						case 'slide' : divBack.slideDown('fast'); break;
-						default : divBack.show();	
+						case 'fade' : divBack.stop(true,true).fadeIn('fast'); break;
+						case 'slide' : divBack.stop(true,true).slideDown('fast'); break;
+						default : divBack.stop(true,true).show();
 					}
 				}
 				else {
 					switch (opts.appearMethod) {
-						case 'fade' : divBack.fadeOut('fast'); break;
-						case 'slide' : divBack.slideUp('fast'); break;
-						default : divBack.hide();	
+						case 'fade' : divBack.stop(true,true).fadeOut('fast'); break;
+						case 'slide' : divBack.stop(true,true).slideUp('fast'); break;
+						default : divBack.stop(true,true).hide();
 					}
 				}
 			});
-			
+
 			/** ZScroll to top page on click **/
 			$('#BackToTop').click(function(e) {
 				e.preventDefault();
 				$('body,html').animate({scrollTop:0},opts.timeEffect,opts.effectScroll);
 			});
 		},
-		
+
 		/** Create the link **/
 		_constructLink:function() {
 			divBack = $('<a />',{
@@ -72,11 +72,11 @@
 			}).prependTo('body');
 			if(!opts.autoShow) divBack.show();
 		}
-	
+
 	};
-	
+
 	/** Init method **/
 	BackToTop = function(options) {
 		$.BackToTop.init(options);
 	};
-})(jQuery); 
+})(jQuery);
