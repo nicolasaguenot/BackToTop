@@ -1,7 +1,7 @@
 /************************************************************************
 *************************************************************************
 @Name :       	BackToTop - jQuery Plugin
-@Revison :    	1.0
+@Revison :    	1.1
 @Date : 		08/2013
 @Author:     	ALPIXEL - (www.myjqueryplugins.com - www.alpixel.fr)
 @Support:    	FF, IE7, IE8, MAC Firefox, MAC Safari
