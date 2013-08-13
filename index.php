@@ -79,7 +79,9 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
             autoShowOffset: 300,
 			timeEffect : 800,
 			appearMethod : 'fade',
-			effectScroll : 'easeOutCubic' /** all effects http://jqueryui.com/docs/effect/#easing */
+			effectScroll : 'easeOutCubic', /** all effects http://jqueryui.com/docs/effect/#easing */
+            opacity : 1,
+            top: 50
 		});
 	});
 	</script>
