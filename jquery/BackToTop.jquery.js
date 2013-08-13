@@ -24,7 +24,9 @@
 			autoShowOffset : 0,
 			timeEffect : 500,
 			effectScroll : 'linear',
-			appearMethod : 'slide'
+			appearMethod : 'slide',
+            top: 10,
+            opacity: 0.9
 		},
 
 		/*****************/
@@ -56,7 +58,7 @@
 				}
 			});
 
-			/** ZScroll to top page on click **/
+			/** Scroll to top page on click **/
 			$('#BackToTop').click(function(e) {
 				e.preventDefault();
 				$('body,html').animate({scrollTop:0},opts.timeEffect,opts.effectScroll);
@@ -68,8 +70,13 @@
 			divBack = $('<a />',{
 				id : 'BackToTop',
 				href : '#body',
+				css : {
+					top: opts.top,
+					opacity: opts.opacity
+				},
 				html : '<span>'+opts.text+'</span>'
 			}).prependTo('body');
+
 			if(!opts.autoShow) divBack.show();
 		}
 
@@ -79,4 +86,6 @@
 	BackToTop = function(options) {
 		$.BackToTop.init(options);
 	};
+
 })(jQuery);
+

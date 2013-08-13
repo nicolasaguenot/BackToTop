@@ -70,15 +70,16 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 
 	<script type="text/javascript" src="jquery/jquery.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
-	<script type="text/javascript" src="jquery/BackToTop.min.jquery.js"></script>
+	<script type="text/javascript" src="jquery/BackToTop.jquery.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		BackToTop({
-				text : '^ Back to top',
-				autoShow : true,
-				timeEffect : 800,
-				appearMethod : 'slide',
-				effectScroll : 'easeOutCubic' /** all effects http://jqueryui.com/docs/effect/#easing */
+			text : '^ Back to top',
+			autoShow : true,
+            autoShowOffset: 300,
+			timeEffect : 800,
+			appearMethod : 'fade',
+			effectScroll : 'easeOutCubic' /** all effects http://jqueryui.com/docs/effect/#easing */
 		});
 	});
 	</script>
