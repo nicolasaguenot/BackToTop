@@ -24,7 +24,9 @@
 			autoShowOffset : 0,
 			timeEffect : 500,
 			effectScroll : 'linear',
-			appearMethod : 'slide'
+			appearMethod : 'slide',
+                                                            position: 10,
+                                                            opacity: .5
 		},
 		
 		/*****************/
@@ -70,6 +72,7 @@
 				href : '#body',
 				html : '<span>'+opts.text+'</span>'
 			}).prependTo('body');
+                                                            divBack.css({top: opts.position, opacity: opts.opacity});
 			if(!opts.autoShow) divBack.show();
 		}
 	

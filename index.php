@@ -76,8 +76,9 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 		BackToTop({
 				text : '^ Back to top',
 				autoShow : true,
+                                                                                autoShowOffset: 300,
 				timeEffect : 800,
-				appearMethod : 'slide',
+				appearMethod : 'fade',
 				effectScroll : 'easeOutCubic' /** all effects http://jqueryui.com/docs/effect/#easing */
 		});
 	});
